@@ -1,6 +1,7 @@
 from ws.pageobjects.BasePage import BasePage
 from scrapy import Selector
 from time import sleep
+import random
 
 
 class TrackPage(BasePage):
@@ -58,7 +59,7 @@ class TrackPage(BasePage):
         samples_data = self._get_section_data(page_source, "samples_section")
         sampled_data = self._get_section_data(page_source, "sampled_section")
         covers_data = self._get_section_data(page_source, "covers_section")
-        sleep(2)
+        sleep(random.uniform(2, 6))
 
         return {
             "samples_data": samples_data,
