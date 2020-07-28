@@ -18,6 +18,8 @@ class TrackPage(BasePage):
 
     # That’s-a-Rack That's-a-Rack
     def get_track_page(self, artist, track):
+        artist = self._slugify(artist)
+        track = self._slugify(track)
         self.browser.get(f"https://www.whosampled.com/{artist}/{track}/")
 
     def _get_track_data(self, track_block):
@@ -63,3 +65,7 @@ class TrackPage(BasePage):
             "sampled_data": sampled_data,
             "covers_data": covers_data,
         }
+
+    @staticmethod
+    def _slugify(text):
+        return "-".join(_ for _ in (text.split(" ")))
