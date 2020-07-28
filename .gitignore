@@ -1,0 +1,5 @@
+*.exe
+env
+.vscode
+__pycache__
+*.log
