@@ -53,13 +53,13 @@ class TrackPage(BasePage):
         return tracks_data
 
     def get_samples(self):
-        sleep(2)
+        sleep(random.uniform(2, 3))
         page_source = Selector(text=self.browser.page_source)
 
         samples_data = self._get_section_data(page_source, "samples_section")
         sampled_data = self._get_section_data(page_source, "sampled_section")
         covers_data = self._get_section_data(page_source, "covers_section")
-        sleep(random.uniform(2, 6))
+        sleep(random.uniform(2, 3))
 
         return {
             "samples_data": samples_data,
