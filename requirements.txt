@@ -8,7 +8,7 @@ cffi==1.14.1
 click==7.1.2
 colorama==0.4.3
 constantly==15.1.0
-cryptography==3.0
+cryptography==3.2
 cssselect==1.1.0
 Flask==1.1.2
 flask-restx==0.2.0
