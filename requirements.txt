@@ -18,7 +18,7 @@ incremental==17.5.0
 isort==4.3.21
 itemadapter==0.1.0
 itsdangerous==1.1.0
-Jinja2==2.11.2
+Jinja2==2.11.3
 jsonschema==3.2.0
 lazy-object-proxy==1.4.3
 lxml==4.5.2
